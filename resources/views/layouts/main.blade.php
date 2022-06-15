@@ -1,13 +1,15 @@
-<link rel="stylesheet" href="{{asset('css/style1.css')}}" />
 <link rel="stylesheet" href="{{asset('css/all.min.css')}}" />
-<link rel="icon" href="{{asset('univbobo.png')}}" type="image/png">
+<link rel="stylesheet" href="{{asset('icofont/icofont.min.css')}}" />
+<link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
+<link rel="stylesheet" href="{{asset('css/style1.css')}}" />
+<link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
 
 <body class="crm_body_bg">
     <nav class="sidebar">
         <div class="logo d-flex justify-content-between">
-            <a href="index.html"><img src="../public/univbobo.png" alt="">
-                <p style="text-align:center ;">Universite Nazi Boni</p>
+            <a href=""><img src="{{asset('images/univbobo.png')}}" alt="">
+                <p style="text-align:center ;">Université Nazi Boni</p>
             </a>
             <div class="sidebar_close_icon d-lg-none">
                 <i class="ti-close"></i>
@@ -15,34 +17,35 @@
         </div>
         <ul id="sidebar_menu">
             <li class="mm-active">
-                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                <a class="has-arrow" href="#" aria-expanded="false">
 
-                    <i class="fa-solid fa-house"></i>
+                <i class="icofont-home"></i>
+
                     <span>Acceuil</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="index.html#" aria-expanded="false">
-                    <i class="fa-solid fa-users-line"></i>
+                <a class="has-arrow" href="#" aria-expanded="false">
+                <i class="icofont-users-social"></i>
                     <span>Etudiants</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="index.html#" aria-expanded="false">
-                    <i class="fa-solid fa-headset"></i>
+                <a class="has-arrow" href="#" aria-expanded="false">
+                <i class="icofont-headphone-alt-2"></i>
                     <span>Secrétaire</span>
                 </a>
             </li>
             </li>
             <li class="">
-                <a class="has-arrow" href="index.html#" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>
+                <a class="has-arrow" href="#" aria-expanded="false">
+                <i class="icofont-user-alt-7"></i>
                     <span>Profile</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="index.html#" aria-expanded="false">
-                    <i class="fa-solid fa-gear"></i>
+                <a class="has-arrow" href="#" aria-expanded="false">
+                <i class="icofont-gear"></i>
                     <span>Paramètre</span>
                 </a>
         </ul>
@@ -74,7 +77,7 @@
 
                             </div>
                             <div class="profile_info">
-                                <div><img src="img/client_img.png" alt="#"> Connecté <br> <br></div>
+                                <div><img src="{{asset('images/client_img.png')}}" alt="#"> Connecté <br> <br></div>
                                 <div>
 
                                     <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
@@ -85,7 +88,7 @@
                                     </button>
                                     </button>
                                     <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Liste <i class="fa-solid fa-angle-right"></i>
+                                        Liste <i class="icofont-rounded-right"></i>
                                     </button>
                                 </div>
                             </div>

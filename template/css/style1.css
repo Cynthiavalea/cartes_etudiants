@@ -2919,12 +2919,18 @@ table.dataTable {
 }
 
 .sidebar .logo {
+    
     margin: 30px;
     padding: 33px 30px;
     border-radius: 7px;
 }
 .sidebar .logo p {
+    
     color: #fff !important;
+}
+.sidebar .logo a {
+    
+    text-decoration: none !important;
 }
 
 .sidebar .logo img {
