@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{asset('icofont/icofont.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
 
@@ -65,7 +66,7 @@
                             <div class="search_inner">
                                 <div class="col">
                                     <div class="row">
-                                        <p>@Kriskid</p>
+                                        <p class="text-3xl font-bold underline">@Kriskid</p>
                                         <p>Directeur</p>
                                     </div>
 
