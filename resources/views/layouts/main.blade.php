@@ -18,35 +18,35 @@
         </div>
         <ul id="sidebar_menu">
             <li class="mm-active">
-                <a class="has-arrow" href="#" aria-expanded="false">
+                <a class="has-arrow" href="{{route('root')}}" aria-expanded="false">
 
-                <i class="icofont-home"></i>
+                    <i class="icofont-home"></i>
 
                     <span>Acceuil</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                <i class="icofont-users-social"></i>
+                <a class="has-arrow" href="{{route('etudiant.index')}}" aria-expanded="false">
+                    <i class="icofont-users-social"></i>
                     <span>Etudiants</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                <i class="icofont-headphone-alt-2"></i>
+                <a class="has-arrow" href="{{route('user.index')}}" aria-expanded="false">
+                    <i class="icofont-headphone-alt-2"></i>
                     <span>Secrétaire</span>
                 </a>
             </li>
             </li>
             <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                <i class="icofont-user-alt-7"></i>
+                <a class="has-arrow" href="{{route('user.create')}}" aria-expanded="false">
+                    <i class="icofont-user-alt-7"></i>
                     <span>Profile</span>
                 </a>
             </li>
             <li class="">
                 <a class="has-arrow" href="#" aria-expanded="false">
-                <i class="icofont-gear"></i>
+                    <i class="icofont-gear"></i>
                     <span>Paramètre</span>
                 </a>
         </ul>
@@ -81,14 +81,14 @@
                                 <div><img src="{{asset('images/client_img.png')}}" alt="#"> Connecté <br> <br></div>
                                 <div>
 
-                                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                         Ajouter etudiant
                                     </button>
-                                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                         Ajouter secretaire
                                     </button>
                                     </button>
-                                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                         Liste <i class="icofont-rounded-right"></i>
                                     </button>
                                 </div>
@@ -98,4 +98,22 @@
                 </div>
             </div>
         </div>
+        <div class="main_content_iner ">
+            <div class="container-fluid p-0">
+                @yield('content')
+            </div>
+        </div>
     </section>
+    <div class="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer_iner text-center">
+                        <p>2020 © Influence - Designed by <a href="index_2.html#"> <i class="ti-heart"></i>
+                            </a><a href="index_2.html#"> Dashboard</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

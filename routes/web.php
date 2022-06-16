@@ -6,8 +6,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name("root");
 
 
-Route::get('inscription', [HomeController::class, 'index']);
-Route::get('user', [HomeController::class, 'inscription'])->name('profile');
+Route::resource('etudiant', HomeController::class);
+Route::resource('user', HomeController::class);
