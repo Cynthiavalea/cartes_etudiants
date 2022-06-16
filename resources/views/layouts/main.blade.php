@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css')}}" />
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
 
@@ -104,7 +105,7 @@
             </div>
         </div>
     </section>
-    <div class="footer_part">
+    <!-- <div class="footer_part">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -115,5 +116,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 </body>

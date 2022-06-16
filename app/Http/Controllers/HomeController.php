@@ -33,7 +33,11 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home.index');
+        return view('etudiants.index');
+    }
+
+    public function card(){
+        return view('etudiants.card')
     }
 
 }
