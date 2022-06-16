@@ -180,7 +180,7 @@ li {
 ul,
 ol {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
 }
 
 p {
@@ -1745,11 +1745,11 @@ p a:hover {
     border-color: #007436;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     color: #fff;
     background-color: #16bbe5;
     border-color: #16bbe5;
-}
+} */
 
 .btn_1 {
     background-color: #2daab8;
@@ -2919,18 +2919,13 @@ table.dataTable {
 }
 
 .sidebar .logo {
-    
     margin: 30px;
     padding: 33px 30px;
     border-radius: 7px;
 }
 .sidebar .logo p {
-    
+    text-decoration: none;
     color: #fff !important;
-}
-.sidebar .logo a {
-    
-    text-decoration: none !important;
 }
 
 .sidebar .logo img {
