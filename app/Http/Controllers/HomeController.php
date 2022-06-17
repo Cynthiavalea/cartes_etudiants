@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+<<<<<<< HEAD
     public function home()
     {
         return view('home.index');
@@ -28,6 +29,9 @@ class HomeController extends Controller
     }
     public function edit()
     {
+=======
+    public function home(){
+>>>>>>> 600bb169 (commit)
         return view('home.index');
     }
 
