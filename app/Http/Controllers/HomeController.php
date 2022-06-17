@@ -41,7 +41,7 @@ class HomeController extends Controller
     }
 
     public function card(){
-        return view('etudiants.card')
+        return view('etudiants.card');
     }
 
 }

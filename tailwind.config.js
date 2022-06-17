@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
 
-
->>>>>>> main
-=======
->>>>>>> 600bb169 (commit)
 module.exports = {
   content: [
     "./resources/**/*.blade.php",
@@ -23,8 +9,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
