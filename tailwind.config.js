@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // module.exports = {
 //   content: [],
 //   theme: {
@@ -9,7 +7,6 @@
 // }
 
 
->>>>>>> main
 module.exports = {
   content: [
     "./resources/**/*.blade.php",
@@ -20,8 +17,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
