@@ -2,8 +2,12 @@
 <link rel="stylesheet" href="{{asset('icofont/icofont.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
+<<<<<<< HEAD
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css')}}" />
+=======
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+>>>>>>> main
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
 
