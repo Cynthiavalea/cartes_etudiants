@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // module.exports = {
 //   content: [],
@@ -10,6 +11,8 @@
 
 
 >>>>>>> main
+=======
+>>>>>>> 600bb169 (commit)
 module.exports = {
   content: [
     "./resources/**/*.blade.php",

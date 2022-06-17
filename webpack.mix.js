@@ -12,10 +12,14 @@ const mix = require("laravel-mix");
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 600bb169 (commit)
  mix.js("resources/js/app.js", "public/js")
  .postCss("resources/css/app.css", "public/css", [
    require("tailwindcss"),
  ]);
+<<<<<<< HEAD
 =======
 // mix.js('resources/js/app.js', 'public/js')
 //     .postCss('resources/css/app.css', 'public/css', [
@@ -27,3 +31,5 @@ mix.js("resources/js/app.js", "public/js").postCss(
     [require("tailwindcss")]
 );
 >>>>>>> main
+=======
+>>>>>>> 600bb169 (commit)
