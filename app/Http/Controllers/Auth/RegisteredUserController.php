@@ -38,11 +38,11 @@ class RegisteredUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'user_name' => ['required', 'string', 'max:255'],
             'role' => ['required', 'string', 'max:255'],
-            'photo' => ['required', 'string', 'max:1024'],
+            'photo' => ['required', 'image', 'max:1024'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-        $img_path = $request->photo->store("etudiants");
+        $img_path = $request->photo->store("admin");
 
         $user = User::create([
             'name' => $request->name,
@@ -58,6 +58,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(route('root'));
     }
 }

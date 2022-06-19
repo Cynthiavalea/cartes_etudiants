@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home.index');
+})->name("root")->middleware(['auth']);
+
+Route::get('/card', function () {
+    return view('etudiants.card');
+})->name("card")->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::resource('etudiants', EtudiantController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';

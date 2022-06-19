@@ -27,20 +27,20 @@
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('etudiant.index')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('etudiants.index')}}" aria-expanded="false">
                     <i class="icofont-users-social"></i>
                     <span>Etudiants</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('user.index')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('etudiants.index')}}" aria-expanded="false">
                     <i class="icofont-headphone-alt-2"></i>
                     <span>Secrétaire</span>
                 </a>
             </li>
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('user.create')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('etudiants.create')}}" aria-expanded="false">
                     <i class="icofont-user-alt-7"></i>
                     <span>Profile</span>
                 </a>
@@ -105,17 +105,5 @@
             </div>
         </div>
     </section>
-    <!-- <div class="footer_part">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer_iner text-center">
-                        <p>2020 © Influence - Designed by <a href="index_2.html#"> <i class="ti-heart"></i>
-                            </a><a href="index_2.html#"> Dashboard</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 </body>

@@ -1,28 +1,28 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <a href="{{ route('root') }}">
+                <img class="w-40 h-40" src="{{ asset('images/univbobo.png') }}" />
             </a>
         </x-slot>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" >
             @csrf
             <!-- Photo -->
             <div>
                 <x-label for="photo" :value="__('Photo')" />
 
-                <x-input id="photo" class="block mt-1 w-full rounded border-4" type="file" name="photo" :value="old('photo')" required />
+                <x-input id="photo" class="block mt-1 w-full rounded border-2" type="file" name="photo" :value="old('photo')" required />
             </div> 
 
             <!-- Name -->
             <div>
                 <x-label for="name" :value="__('Nom')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required />
             </div> 
             
             <!-- LastName -->

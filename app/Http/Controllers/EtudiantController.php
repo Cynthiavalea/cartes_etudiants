@@ -85,7 +85,7 @@ class EtudiantController extends Controller
     public function edit(Etudiant $Etudiant)
     {
 
-        return view("Etudiants/edit", compact("Etudiant"));
+        return view("etudiants.edit", compact("etudiant"));
     }
 
     /**
@@ -114,7 +114,7 @@ class EtudiantController extends Controller
         $this->validate($request, $rules);
         if ($request->has("photo")) {
             Storage::delete($Etudiant->photo);
-            $img_path = $request->photo->store("Etudiants");
+            $img_path = $request->photo->store("etudiants");
         }
         $Etudiant->update(
             [
