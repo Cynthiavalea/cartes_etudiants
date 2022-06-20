@@ -71,9 +71,9 @@ class EtudiantController extends Controller
      * @param  \App\Models\Etudiant  $Etudiant
      * @return \Illuminate\Http\Response
      */
-    public function show(Etudiant $Etudiant)
+    public function show(Etudiant $etudiant)
     {
-        return view("etudiants.edit");
+        return view("etudiants.card", compact('etudiant'));
     }
 
     /**

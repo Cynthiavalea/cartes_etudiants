@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('DataTables/DataTables/css/jquery.dataTables.min.js') }}" ></script>
-<link rel="stylesheet" type="text/css" href="{{ asset('DataTables/DataTables/js/jquery.dataTables.min.js') }}" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
 
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 

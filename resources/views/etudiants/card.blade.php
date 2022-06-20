@@ -1,75 +1,42 @@
 @extends('layouts.main')
 
 @section("content")
-<div class="flex p-6 font-mono border-black border-1 rounded-xl">
-    <div class="flex-none w-48 mb-10 relative z-10 ">
-        <img src="{{ asset('images/chris.jpg')}}" alt="" class="absolute z-10 inset-0 w-full h-42 " loading="lazy" />
-    </div>
-    <form class="flex-auto pl-6">
-        <!-- <div class="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6"> -->
-        <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">
-            Retro Shoe
+<div class=" h-100 mt-16 pt-6 font-mono border-black border-1 rounded-xl">
+    <div class="flex h-30 w-full">
+        <h1 class="relative flex-none mb-1 text-2xl font-semibold text-[#007436] pl-6">
+            Carte Etudiant -- Universite Nazi-Boni
         </h1>
-        <div class="relative text-lg text-white">
-            $89.00
+        <div class="flex w-20 mb-1 ml-36 relative z-10 ">
+            <img src="{{ asset('images/univbobo.png')}}" alt="logo_universiteBobo" class="relative z-10 inset-0 w-auto h-42 " loading="lazy" />
+            <p class="font-semibold text-black text-center p-3">Universite<br> Nazi-Boni</p>
         </div>
-        <div class="relative uppercase text-teal-400 ml-3">
-            In stock
+    </div>
+    <hr class="border-8 pb-1 w-1/4 text-[#007436] mb-3">
+    <div class="flex">
+        <div class="flex-none w-60 h-full mb-1 relative z-10 ml-2 ">
+            <img src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{$etudiant->nom}}" class="z-10 inset-0 w-auto h-3/4 lowercase" loading="lazy" />
         </div>
-        <!-- </div> -->
-        <div class="flex items-baseline my-6">
-            <div class="space-x-3 flex text-sm font-medium">
-                <label>
-                    <input class="sr-only peer" name="size" type="radio" value="xs" checked />
-                    <div class="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                        XS
-                    </div>
-                </label>
-                <label>
-                    <input class="sr-only peer" name="size" type="radio" value="s" />
-                    <div class="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                        S
-                    </div>
-                </label>
-                <label>
-                    <input class="sr-only peer" name="size" type="radio" value="m" />
-                    <div class="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                        M
-                    </div>
-                </label>
-                <label>
-                    <input class="sr-only peer" name="size" type="radio" value="l" />
-                    <div class="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                        L
-                    </div>
-                </label>
-                <label>
-                    <input class="sr-only peer" name="size" type="radio" value="xl" />
-                    <div class="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                        XL
-                    </div>
-                </label>
+        <form class="flex-auto pl-6">
+            <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold">
+                Matricule: {{ $etudiant->matricule}}
+            </h1>
+            <div class="relative text-lg ">
+                Nom: {{$etudiant->nom}}
             </div>
-        </div>
-        <div class="flex space-x-2 mb-4 text-sm font-medium">
-            <div class="flex space-x-4">
-                <button class="px-6 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black" type="submit">
-                    Buy now
-                </button>
-                <button class="px-6 h-12 uppercase font-semibold tracking-wider border border-slate-200 text-slate-900" type="button">
-                    Add to bag
-                </button>
+            <div class="relative text-lg  mt-2">
+                Prenom: {{$etudiant->prenom}}
             </div>
-            <button class="flex-none flex items-center justify-center w-12 h-12 text-black" type="button" aria-label="Like">
-                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-                </svg>
-            </button>
-        </div>
-        <p class="text-xs leading-6 text-slate-500">
-            Free shipping on all continental US orders.
-        </p>
-    </form>
+            <div class="relative text-lg mt-2">
+                Cycle: {{$etudiant->cursus_id}}
+            </div>
+            <div class="relative  text-lg mt-2">
+                Contact: {{$etudiant->telephone}}
+            </div>
+            <div class="relative  text-lg mt-2">
+                Email: {{$etudiant->email}}
+            </div>
+        </form>
+    </div>
 </div>
 
 @endsection
