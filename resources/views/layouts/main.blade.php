@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
@@ -70,8 +70,8 @@
                             <div class="search_inner">
                                 <div class="col">
                                     <div class="row">
-                                        <p class="text-3xl font-bold underline">@Kriskid</p>
-                                        <p>Directeur</p>
+                                        <p class="text-3xl font-bold underline">@ {{ Auth::user()->user_name }}</p>
+                                        <p class="capitalize">{{ Auth::user()->role->type }}</p>
                                     </div>
 
                                 </div>
@@ -82,7 +82,14 @@
 
                             </div>
                             <div class="profile_info">
-                                <div><img src="{{asset('images/client_img.png')}}" alt="status"> Connecté <br> <br></div>
+
+                                <div id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <input type="hidden" name="name" value="value" />
+                                        <a onclick="this.parentNode.submit();" title="Cliquez pour se deconnecter"><img src="{{asset('storage/'. Auth::user()->photo) }}" alt="status"> Connecté <br> <br></a>
+                                    </form>
+                                </div>
                                 <div>
 
                                     <a href="{{ route('etudiants.create')}}">
@@ -90,16 +97,21 @@
                                             Ajouter etudiant
                                         </button>
                                     </a>
-                                    <a href="{{ route('register')}}">
+
+                                    @if( Auth::user()->role->type == 'directeur')
+                                    <a href="{{ route('secretaire')}}">
                                         <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                             Ajouter secretaire
                                         </button>
                                     </a>
+                                    @endif
+
                                     <a href="{{ route('etudiants.index')}}">
                                         <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                             Liste <i class="icofont-rounded-right"></i>
                                         </button>
                                     </a>
+
                                 </div>
                             </div>
                         </div>

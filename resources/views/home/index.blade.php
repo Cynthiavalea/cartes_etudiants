@@ -11,14 +11,14 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach ($users as $user)
-                @unless($user->role == 'secretaire')
-                <tr class="w-full">
-                    <td class="flex "> <img src="{{asset('storage/'. $user->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
-                        <p class="flex text-black font-semibold p-3"> {{$user->name}} @_{{$user->user_name}} <span class="font-mono font-normal"> ({{ $user->role->type}})</span></p>
-                    </td>
-                </tr>
-                @endunless
+                @foreach ($users as $user)
+                    @if($user->role->type   == 'secretaire')
+                        <tr class="w-full">
+                            <td class="flex "> <img src="{{asset('storage/'. $user->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
+                                <p class="flex text-black font-semibold p-3"> {{$user->name}} <span>@</span> {{$user->user_name}} <span class="font-mono font-normal"> ({{ $user->role->type}})</span></p>
+                            </td>
+                        </tr>
+                    @endif
                 @endforeach
             </tbody>
         </table>
