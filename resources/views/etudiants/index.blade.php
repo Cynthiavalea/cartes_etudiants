@@ -22,7 +22,7 @@
         <tbody>
             @foreach($etudiants as $etudiant)
             <tr>
-                <td><a href="{{ route('etudiants.show', $etudiant) }}"><img class="w-30 h-30" src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{ $etudiant->nom}}" /> </a></td>
+                <td><a href="{{ route('etudiants.show', $etudiant) }}"><img class="w-7 h-7 rounded-full" src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{ $etudiant->nom}}" /> </a></td>
                 <td>{{$etudiant->matricule}}</td>
                 <td>{{$etudiant->nom}}</td>
                 <td>{{$etudiant->prenom}}</td>

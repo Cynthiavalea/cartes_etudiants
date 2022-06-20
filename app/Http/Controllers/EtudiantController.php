@@ -82,7 +82,7 @@ class EtudiantController extends Controller
      * @param  \App\Models\Etudiant  $Etudiant
      * @return \Illuminate\Http\Response
      */
-    public function edit(Etudiant $Etudiant)
+    public function edit(Etudiant $etudiant)
     {
 
         return view("etudiants.edit", compact("etudiant"));
@@ -120,15 +120,15 @@ class EtudiantController extends Controller
             [
                 "nom" => $request->nom,
                 "prenom" => $request->prenom,
-                "matricule" => $request->prenom,
-                "cursus_id" => $request->prenom,
+                "matricule" => $request->matricule,
+                "cursus_id" => $request->cursus_id,
                 "date_de_naissance" => $request->date_de_naissance,
                 "telephone" => $request->telephone,
                 "email" => $request->email,
                 "photo" =>  isset($img_path) ? $img_path : $Etudiant->photo
             ]
         );
-        return redirect(route("etudiant.index"));
+        return redirect(route("etudiants.index"));
     }
 
     /**
