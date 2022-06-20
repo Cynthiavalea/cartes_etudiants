@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section("content")
-<div class=" h-100 mt-16 pt-6 font-mono border-black border-1 rounded-xl">
+<div class=" h-100 mt-16 pt-6 font-mono border-black border-1 rounded-xl w-2/3">
     <div class="flex h-30 w-full">
         <h1 class="relative flex-none mb-1 text-2xl font-semibold text-[#007436] pl-6">
             Carte Etudiant -- Universite Nazi-Boni
@@ -37,6 +37,12 @@
             </div>
         </form>
     </div>
+    <hr class="border-8 pt-1 w-1/4 text-[#007436] mt-3">
 </div>
+<a href="#" >
+    <button type="button" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-96" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Mailer etudiant
+    </button>
+</a>
 
 @endsection

@@ -26,7 +26,7 @@
                 <td>{{$etudiant->matricule}}</td>
                 <td>{{$etudiant->nom}}</td>
                 <td>{{$etudiant->prenom}}</td>
-                <td>{{$etudiant->cursus_id}}</td>
+                <td class="capitalize">{{$etudiant->cursus->filiere}} {{$etudiant->cursus->annee}}</td>
                 <td>{{$etudiant->telephone}}</td>
                 <td>{{$etudiant->email}}</td>
                 <td>{{$etudiant->date_de_naissance}}</td>

@@ -20,7 +20,7 @@ class Etudiant extends Model
         "matricule"
     ];
 
-    function cursus(): BelongsTo
+    function cursus()
     {
         return $this->belongsTo(Cursus::class, "cursus_id");
     }

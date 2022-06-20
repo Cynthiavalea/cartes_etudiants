@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,15 @@ use App\Http\Controllers\EtudiantController;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-})->name("root")->middleware(['auth']);
+Route::get('/', [HomeController::class, 'index'])->name('root')->middleware(['auth']);
 
 Route::get('/card', function () {
     return view('etudiants.card');
 })->name("card")->middleware(['auth']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 Route::resource('etudiants', EtudiantController::class)->middleware(['auth']);
 

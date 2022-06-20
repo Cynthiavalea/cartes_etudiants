@@ -12,7 +12,7 @@ class Cursus extends Model
         "filiere", 
         "annee"
     ];
-    function etudiant(): HasMany
+    function etudiant()
     {
         return $this->hasMany(Etudiant::class);
     }
