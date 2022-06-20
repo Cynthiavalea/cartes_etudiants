@@ -3,7 +3,10 @@
 <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
 <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css')}}" />
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('DataTables/DataTables/css/jquery.dataTables.min.css') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ asset('DataTables/DataTables/js/jquery.dataTables.min.js') }}" />
+
 <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
 
 
@@ -18,7 +21,7 @@
             </div>
         </div>
         <ul id="sidebar_menu">
-            <li class="mm-active">
+            <li class="">
                 <a class="has-arrow" href="{{route('root')}}" aria-expanded="false">
 
                     <i class="icofont-home"></i>
@@ -79,7 +82,7 @@
 
                             </div>
                             <div class="profile_info">
-                                <div><img src="{{asset('images/client_img.png')}}" alt="#"> Connecté <br> <br></div>
+                                <div><img src="{{asset('images/client_img.png')}}" alt="status"> Connecté <br> <br></div>
                                 <div>
 
                                     <a href="{{ route('etudiants.create')}}">
@@ -110,5 +113,5 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
 </body>

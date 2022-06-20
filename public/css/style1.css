@@ -1785,11 +1785,11 @@ p a:hover {
     color: #2e4765;
 }
 
-.btn_1.#007436 {
+/* .btn_1.#007436 {
     background-color: rgba(46, 201, 184, 0.1);
     border: 1px solid transparent;
     color: #2ec9b8;
-}
+} */
 
 .btn_1.sm {
     font-size: 12px;
@@ -3755,12 +3755,12 @@ body::-webkit-scrollbar {
     color: #fcad73 !important;
 }
 
-.single_element
+/* .single_element
     .single_quick_activity
     .count_content.count_content2
     .#007436_color {
     color: #2daab8 !important;
-}
+} */
 
 .single_element .single_quick_activity h3 {
     font-size: 45px;
@@ -5233,11 +5233,11 @@ canvas#highlights {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
-.custom_striped_progressbar .progress-bar.#007436_bar {
+/* 
+.custom_striped_progressbar .progress-bar. #007436_bar {
     background-image: url(https://demo.dashboardpack.com/hospital-html/img/progress/progress-bg.png);
     background-size: cover;
-}
+} */
 
 .custom_striped_progressbar .progress-bar.yellow_bar {
     background-image: url(https://demo.dashboardpack.com/hospital-html/img/progress/design-progress-yellow.png);

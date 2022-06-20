@@ -3,9 +3,9 @@
 @section("content")
 
 
-<div class="QA_table mb_30">
+<div class="QA_table mb_30 bg-slate-50">
 
-    <table class="table lms_table_active">
+    <table class="table display" id="mData">
         <thead>
             <tr>
                 <th scope="col">Profile</th>
@@ -22,7 +22,7 @@
         <tbody>
             @foreach($etudiants as $etudiant)
             <tr>
-                <td><a href="{{ route('etudiants.show', $etudiant) }}"><img class="w-30 h-30" src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{ $etudiant->nom}}"/> </a></td>
+                <td><a href="{{ route('etudiants.show', $etudiant) }}"><img class="w-30 h-30" src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{ $etudiant->nom}}" /> </a></td>
                 <td>{{$etudiant->matricule}}</td>
                 <td>{{$etudiant->nom}}</td>
                 <td>{{$etudiant->prenom}}</td>
@@ -30,14 +30,37 @@
                 <td>{{$etudiant->telephone}}</td>
                 <td>{{$etudiant->email}}</td>
                 <td>{{$etudiant->date_de_naissance}}</td>
-                <td><i class="icofont-print"></i></td>
-                <td><i class="icofont-edit"></i></td>
-                <td><i class="icofont-trash"></i></td>
+                <td><i class="icofont-print" style="color:#1C683F ;"></i></td>
+                <td><a href="{{ route('etudiants.edit', $etudiant) }}"><i class="icofont-edit" style="color:#F3CE1B;"></i></a></td>
+                <td>
+                    <form action="{{ route('etudiants.destroy', $etudiant) }}" method="post" onsubmit="return cnf()">
+                        @csrf
+                        @method("DELETE")
+                        <i class="icofont-trash" style="color:red;">
+                            <input type="submit" value="val" class="sup">
+                            </input>
+                        </i>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>
     </table>
 </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#mData').DataTable();
+    });
+
+    function cnf() {
+        let ret = confirm("Voulez vous retirer cet etudiant de la liste ? ");
+        if (ret) {
+            return true;
+        }
+        return false;
+    }
+</script>
 
 @endsection
