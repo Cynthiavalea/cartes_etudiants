@@ -20,8 +20,9 @@ class CreateEtudiantsTable extends Migration
             $table->string('prenom');
             $table->string('email');
             $table->string('telephone');
+            $table->unsignedBigInteger('cursus_id');
             $table->string('date_de_naissance');
-            $table->foreignId('curus_id');
+            $table->foreign('cursus_id')->references('id')->on('cursuses')->onDelete('cascade');
             $table->string('photo');
             $table->timestamps();
         });
