@@ -56,7 +56,7 @@
                 <div>
                     <x-label for="cursus_id" :value="__('Filiere')" />
 
-                    <select id="cursus_id" class="block rounded mt-1 w-full border-gray-300" name="role" :value="{{ isset($etudiant) ? $etudiant->cursus_id : old('cursus_id') }}" required>
+                    <select id="cursus_id" class="block rounded mt-1 w-full border-gray-300" name="cursus_id" :value="{{ isset($etudiant) ? $etudiant->cursus_id : old('cursus_id') }}" required>
                         <option value="1" selected>Informatique(1)</option>
                     </select>
                 </div>

@@ -41,10 +41,10 @@
             
             <!-- Role -->
             <div>
-                <x-label for="role" :value="__('Role')" />
+                <x-label for="role_id" :value="__('Role')" />
 
-                <select id="role" class="block mt-1 w-full rounded" name="role" :value="old('role')" required>
-                    <option value="secretaire" selected>Secretaire</option>
+                <select id="role_id" class="block mt-1 w-full rounded" name="role_id" :value="old('role_id')" required>
+                    <option value="2" selected>Secretaire</option>
                 </select>
             </div>
 

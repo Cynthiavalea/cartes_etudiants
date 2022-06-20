@@ -44,8 +44,8 @@ class EtudiantController extends Controller
             "matricule" => "bail|required|string|max:256",
             "cursus_id" => "bail|required|integer",
             "date_de_naissance" => "bail|required|date",
-            "telephone" => "bail|required|unique:Etudiants|max:26",
-            "email" => "bail|required|string|unique:Etudiants|max:256",
+            "telephone" => "bail|required|unique:etudiants|max:26",
+            "email" => "bail|required|string|unique:etudiants|max:256",
             "photo" => "bail|image|required|max:1024"
         ]);
         $img_path = $request->photo->store("etudiants");
@@ -62,7 +62,7 @@ class EtudiantController extends Controller
             ]
         );
 
-        return redirect(route("etudiant.index"));
+        return redirect(route("etudiants.index"));
     }
 
     /**
@@ -73,7 +73,7 @@ class EtudiantController extends Controller
      */
     public function show(Etudiant $Etudiant)
     {
-        //
+        return view("etudiants.edit");
     }
 
     /**

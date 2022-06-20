@@ -82,16 +82,21 @@
                                 <div><img src="{{asset('images/client_img.png')}}" alt="#"> Connecté <br> <br></div>
                                 <div>
 
-                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Ajouter etudiant
-                                    </button>
-                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Ajouter secretaire
-                                    </button>
-                                    </button>
-                                    <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                        Liste <i class="icofont-rounded-right"></i>
-                                    </button>
+                                    <a href="{{ route('etudiants.create')}}">
+                                        <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                            Ajouter etudiant
+                                        </button>
+                                    </a>
+                                    <a href="{{ route('register')}}">
+                                        <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                            Ajouter secretaire
+                                        </button>
+                                    </a>
+                                    <a href="{{ route('etudiants.index')}}">
+                                        <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                            Liste <i class="icofont-rounded-right"></i>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
