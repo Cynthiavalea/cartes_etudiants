@@ -35,24 +35,20 @@
                     <span>Etudiants</span>
                 </a>
             </li>
+            @if( Auth::user()->role->type == 'directeur')
             <li class="">
-                <a class="has-arrow" href="{{route('etudiants.index')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('liste_secretaire')}}" aria-expanded="false">
                     <i class="icofont-headphone-alt-2"></i>
                     <span>Secrétaire</span>
                 </a>
             </li>
-            </li>
+            @endif
             <li class="">
-                <a class="has-arrow" href="{{route('etudiants.create')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('update_profile')}}" aria-expanded="false">
                     <i class="icofont-user-alt-7"></i>
                     <span>Profile</span>
                 </a>
             </li>
-            <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <i class="icofont-gear"></i>
-                    <span>Paramètre</span>
-                </a>
         </ul>
     </nav>
 
@@ -108,7 +104,7 @@
 
                                     <a href="{{ route('etudiants.index')}}">
                                         <button type="button" class="bg-[#1C683F] hover:bg-yellow-500 btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                            Liste <i class="icofont-rounded-right"></i>
+                                            Liste Etudiants<i class="icofont-rounded-right"></i>
                                         </button>
                                     </a>
 

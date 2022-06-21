@@ -25,6 +25,8 @@ Route::get('/card', function () {
 })->name("card")->middleware(['auth']);
 
 Route::get('/dashboard', [HomeController::class , "index"])->middleware(['auth'])->name('dashboard');
+Route::get('/secretaires', [HomeController::class , "secretaire"])->middleware(['auth'])->name('liste_secretaire');
+Route::get('/update_profile', [HomeController::class , "update_profile"])->middleware(['auth'])->name('update_profile');
 
 Route::get('/create_user', function () {
     return view('auth.register');

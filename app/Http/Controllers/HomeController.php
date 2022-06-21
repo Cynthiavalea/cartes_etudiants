@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Etudiant;
 use App\Models\User;
 
@@ -15,5 +16,14 @@ class HomeController extends Controller
         $users = User::latest()->take(5)->get();
         return view('home.index', compact(["etudiants", "users"]));
     }
-
+    public function secretaire()
+    {
+        $users = User::all();
+        return view('users.index', compact("users"));
+    }
+    public function update_profile()
+    {
+        $users = User::all();
+        return view('users.index', compact("users"));
+    }
 }
