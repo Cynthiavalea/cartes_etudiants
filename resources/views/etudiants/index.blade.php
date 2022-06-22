@@ -34,13 +34,13 @@
                 @if( Auth::user()->role->type == 'directeur')
                 <td><a href="{{ route('etudiants.edit', $etudiant) }}"><i class="icofont-edit" style="color:#F3CE1B;"></i></a></td>
                 <td>
-                    <form action="{{ route('etudiants.destroy', $etudiant) }}" method="post" onsubmit="return cnf()">
-                        @csrf
-                        @method("DELETE")
-                        <i class="icofont-trash" style="color:red;">
-                            <input type="submit" value="&#xee09;" class="sup">
-                        </i>
-                    </form>
+                    <i class="icofont-trash" style="color:red;">
+                        <form action="{{ route('etudiants.destroy', $etudiant) }}" method="post" onsubmit="return cnf()">
+                            @csrf
+                            @method("DELETE")
+                            <input type="hidden" value="submit" class="sup">
+                        </form>
+                    </i>
                 </td>
                 @endif
             </tr>

@@ -38,10 +38,15 @@
         </div>
     </div>
 </div>
-<a href="#" >
-    <button type="button" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-96" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-        Mailer etudiant
-    </button>
-</a>
 
+<div class="flex">
+<form action="{{  route('send_mail', $etudiant) }}" method="get">
+    <input type="hidden" name="email" value="{{ $etudiant->email }}">
+    <input type="submit" value="Notifier" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-80" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+</form>
+
+<a href="{{  route('send_mail', $etudiant) }}">
+    <input type="submit" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-6" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+</a>
+</div>
 @endsection

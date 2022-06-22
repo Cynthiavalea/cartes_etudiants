@@ -19,10 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [HomeController::class, 'index'])->name('root')->middleware(['auth']);
 Route::post('/create_secretaire', [RegisteredUserController::class, 'store'])->name('add_secretaire')->middleware(['auth']);
-
-Route::get('/card', function () {
-    return view('etudiants.card');
-})->name("card")->middleware(['auth']);
+Route::get('/send_mail', [HomeController::class, "sendMail"])->name("send_mail")->middleware(['auth']);
 
 Route::get('/dashboard', [HomeController::class , "index"])->middleware(['auth'])->name('dashboard');
 Route::get('/secretaires', [HomeController::class , "secretaire"])->middleware(['auth'])->name('liste_secretaire');

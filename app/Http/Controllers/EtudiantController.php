@@ -48,7 +48,8 @@ class EtudiantController extends Controller
             "email" => "bail|required|string|unique:etudiants|max:256",
             "photo" => "bail|image|required|max:1024"
         ]);
-        $img_path = $request->photo->store("etudiants");
+        $ext = $request->photo->extension();
+        $img_path = $request->photo->storeAs("etudiants", "$request->nom.$ext", "public");
         Etudiant::create(
             [
                 "nom" => $request->nom,
