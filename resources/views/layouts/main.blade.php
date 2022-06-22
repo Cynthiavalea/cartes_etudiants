@@ -122,7 +122,8 @@
                 </div>
             </div>
         </section>
-
+    <script src="{{ asset('js/print.min.js') }}"></script>
     </body>
+
 
 </html>
