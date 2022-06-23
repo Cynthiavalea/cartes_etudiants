@@ -51,17 +51,17 @@
         Imprimer la carte
     </button>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 <script>
+    let carte = document.getElementById("printCard");
+
     function printCard() {
-        let carte = document.getElementById("printCard").innerHTML;
-        let printer = window.open('', '', 'height=500, width=500');
-        printer.document.write('<html>');
-        printer.document.write('<body>');
-        printer.document.write(carte);
-        printer.document.write('</body></html>');
-        printer.document.close();
-        printer.print();
+        let doc = new jsPDF("l", "px", "credit-card");
+        doc.html(carte, {
+            callback: function(doc) {
+                doc.save("carte.pdf");
+            }
+        })
     }
 </script>
 @endsection
