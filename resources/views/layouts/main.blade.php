@@ -11,9 +11,10 @@
         <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
         <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}" defer></script>
+        <!-- <link rel="stylesheet" href="{{ asset('js/index.js') }}" defer> -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-        <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script defer type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
     </head>
 
@@ -122,7 +123,6 @@
                 </div>
             </div>
         </section>
-    <script src="{{ asset('js/print.min.js') }}"></script>
     </body>
 
 

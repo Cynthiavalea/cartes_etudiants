@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section("content")
-<div id="printCard">
-    <div class="bg-slate-900 h-80 mt-16 ml-32 pt-1 font-mono border-black border-1 rounded-xl w-2/4">
+<div >
+    <div id="printCard" class="bg-slate-300 h-80 mt-16 ml-32 pt-1 font-mono border-black border-1 rounded-xl w-2/4">
         <div class="flex h-1/4 w-100">
             <div class="mb-1 w-2/3 text-2xl font-semibold text-[#007436] pl-3">
                 Carte Etudiant -- Universite Nazi-Boni
@@ -47,21 +47,13 @@
         <input type="submit" value="Notifier Etudiant" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-80" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
     </form>
 
-    <button type="button" onclick="printCard()" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-6" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+    <script src="{{ asset('js/index.js') }}" defer></script>
+    <div  id="button-print"  class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-6" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
         Imprimer la carte
-    </button>
+    </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 <script>
-    let carte = document.getElementById("printCard");
+    
 
-    function printCard() {
-        let doc = new jsPDF("l", "px", "credit-card");
-        doc.html(carte, {
-            callback: function(doc) {
-                doc.save("carte.pdf");
-            }
-        })
-    }
 </script>
 @endsection
