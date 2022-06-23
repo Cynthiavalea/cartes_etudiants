@@ -31,4 +31,5 @@ Route::get('/create_user', function () {
 
 Route::resource('etudiants', EtudiantController::class)->middleware(['auth']);
 
+
 require __DIR__ . '/auth.php';

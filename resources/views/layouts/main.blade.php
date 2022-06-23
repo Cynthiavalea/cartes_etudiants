@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="{{asset('css/all.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('css/print.min.css')}}"
+        <link rel="stylesheet" href="{{asset('css/print.min.css')}}"/>
         <link rel="stylesheet" href="{{asset('icofont/icofont.min.css')}}" />
         <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
         <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}" defer></script>
-        <!-- <link rel="stylesheet" href="{{ asset('js/index.js') }}" defer> -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-        <script defer type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
+
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}" defer></script>
+        <script defer type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     </head>
 
     <body class="crm_body_bg">

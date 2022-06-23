@@ -35,4 +35,6 @@ class HomeController extends Controller
         Mail::to($request->email)->send(new MailSender());
         return redirect(route('root'))->with("succes", "Etudiant Notifier");
     }
+
+
 }
