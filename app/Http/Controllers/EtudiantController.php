@@ -142,6 +142,6 @@ class EtudiantController extends Controller
     {
         Storage::delete($Etudiant->photo);
         $Etudiant->delete();
-        return redirect(route("etudiant.index"));
+        return redirect(route("etudiants.index"));
     }
 }
