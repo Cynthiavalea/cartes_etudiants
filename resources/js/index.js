@@ -6,7 +6,7 @@ function imprimerCarte() {
     let doc = new jspdf("l", "px", "a3");
     doc.html(carte, {
         callback: function(doc) {
-            doc.print("carte.pdf");
+            doc.save("carte.pdf");
         }
     })
 }

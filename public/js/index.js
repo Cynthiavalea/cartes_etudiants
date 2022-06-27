@@ -2533,7 +2533,7 @@ function imprimerCarte() {
   var doc = new jspdf__WEBPACK_IMPORTED_MODULE_0__["default"]("l", "px", "a3");
   doc.html(carte, {
     callback: function callback(doc) {
-      doc.print("carte.pdf");
+      doc.save("carte.pdf");
     }
   });
 }

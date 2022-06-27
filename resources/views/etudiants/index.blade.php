@@ -32,15 +32,19 @@
                 <td>{{$etudiant->date_de_naissance}}</td>
                 <td><a href="{{ route('etudiants.show', $etudiant) }}"><i class="icofont-print" style="color:#1C683F ;"></i></a></td>
                 @if( Auth::user()->role->type == 'directeur')
-                <td><a href="{{ route('etudiants.edit', $etudiant) }}"><i class="icofont-edit" style="color:#F3CE1B;"></i></a></td>
                 <td>
-                    <i class="icofont-trash" style="color:red;">
-                        <form action="{{ route('etudiants.destroy', $etudiant) }}" method="post" onsubmit="return cnf()">
-                            @csrf
-                            @method("DELETE")
+                    <a href="{{ route('etudiants.edit', $etudiant) }}">
+                        <i class="icofont-edit" style="color:#F3CE1B;"></i>
+                    </a>
+                </td>
+                <td>
+                    <form action="{{ route('etudiants.destroy', $etudiant) }}" method="post" onsubmit="return cnf()">
+                        @csrf
+                        @method("DELETE")
+                        <i class="icofont-trash" style="color:red;">
                             <input type="hidden" value="submit" class="sup">
-                        </form>
-                    </i>
+                        </i>
+                    </form>
                 </td>
                 @endif
             </tr>

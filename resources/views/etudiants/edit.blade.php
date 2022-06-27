@@ -23,7 +23,7 @@
                 <div>
                     <x-label for="photo" :value="__('Photo')" />
 
-                    <input id="photo" class="block rounded mt-1 w-full border-gray-300 border-2" type="file" name="photo" value="{{ isset($etudiant) ? $etudiant->photo : old('photo') }}" required />
+                    <input id="photo" class="block rounded mt-1 w-full border-gray-300 border-2" type="file" name="photo" value="{{ isset($etudiant) ? $etudiant->photo : old('photo') }}"/>
                 </div>
 
                 <!-- Matricule -->
