@@ -1,5 +1,5 @@
 @component('mail::message')
-<!-- ![logo univbobo]({{asset('images/univbobo.png')}}) -->
+<!-- ![logo univbobo]({{ secure_asset('images/univbobo.png')}}) -->
 ### Bonjour Cher etudiant !
 
 Votre Enregistrement pour la creation de carte a ete bien pris en compte.

@@ -5,23 +5,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{asset('css/all.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('css/print.min.css')}}"/>
-        <link rel="stylesheet" href="{{asset('icofont/icofont.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('css/bootstrap1.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('css/style1.css')}}" />
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/all.min.css')}}" />
+        <link rel="stylesheet" href="{{ secure_asset('css/print.min.css')}}"/>
+        <link rel="stylesheet" href="{{ secure_asset('icofont/icofont.min.css')}}" />
+        <link rel="stylesheet" href="{{ secure_asset('css/bootstrap1.min.css')}}" />
+        <link rel="stylesheet" href="{{ secure_asset('css/style1.css')}}" />
+        <link rel="stylesheet" href="{{  secure_asset('css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
-        <link rel="icon" href="{{asset('images/univbobo.png')}}" type="image/png">
+        <link rel="icon" href="{{ secure_asset('images/univbobo.png')}}" type="image/png">
 
-        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}" defer></script>
+        <script type="text/javascript" src="{{  secure_asset('js/jquery.min.js') }}" defer></script>
         <script defer type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     </head>
 
     <body class="crm_body_bg">
         <nav class="sidebar">
             <div class="logo d-flex justify-content-between">
-                <a href=""><img src="{{asset('images/univbobo.png')}}" alt="">
+                <a href=""><img src="{{ secure_asset('images/univbobo.png')}}" alt="">
                     <p style="text-align:center ;">Université Nazi Boni</p>
                 </a>
                 <div class="sidebar_close_icon d-lg-none">
@@ -85,7 +85,7 @@
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
                                             <input type="hidden" name="name" value="value" />
-                                            <a onclick="this.parentNode.submit();" title="Cliquez pour se deconnecter"><img src="{{asset('storage/'. Auth::user()->photo) }}" alt="status"> Connecté <br> <br></a>
+                                            <a onclick="this.parentNode.submit();" title="Cliquez pour se deconnecter"><img src="{{ secure_asset('storage/'. Auth::user()->photo) }}" alt="status"> Connecté <br> <br></a>
                                         </form>
                                     </div>
                                     <div>

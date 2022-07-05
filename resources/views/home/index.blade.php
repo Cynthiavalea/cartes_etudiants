@@ -14,7 +14,7 @@
                     @foreach ($users as $user)
                     @if($user->role->type == 'secretaire')
                     <tr class="w-full">
-                        <td class="flex "> <img src="{{asset('storage/'. $user->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
+                        <td class="flex "> <img src="{{ secure_asset('storage/'. $user->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
                             <p class="flex text-black font-semibold p-3"> {{$user->name}} <span>@</span> {{$user->user_name}} <span class="font-mono font-normal"> ({{ $user->role->type}})</span></p>
                         </td>
                     </tr>
@@ -34,7 +34,7 @@
             <tbody>
                 @foreach ($etudiants as $etudiant)
                 <tr class="w-full">
-                    <td class="flex "> <img src="{{asset('storage/'. $etudiant->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
+                    <td class="flex "> <img src="{{ secure_asset('storage/'. $etudiant->photo)}}" class="w-10 h-10 m-2 rounded-full" alt="">
                         <p class="flex text-black font-semibold p-3"> {{$etudiant->matricule}} {{$etudiant->nom}} {{$etudiant->prenom}} </p>
                     </td>
                 </tr>

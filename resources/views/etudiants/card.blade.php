@@ -8,14 +8,14 @@
                 Carte Etudiant -- Universite Nazi-Boni
             </div>
             <div class="flex w-1/3 h-20 mb-1 ml-6">
-                <img src="{{ asset('images/univbobo.png')}}" alt="logo_universiteBobo" class="relative z-10 inset-0 w-auto h-42 " loading="lazy" />
+                <img src="{{  secure_asset('images/univbobo.png')}}" alt="logo_universiteBobo" class="relative z-10 inset-0 w-auto h-42 " loading="lazy" />
                 <p class="font-semibold text-black text-center p-3">Universite<br> Nazi-Boni</p>
             </div>
         </div>
         <p class="border-1 w-1/3 mb-3 border-black"></p>
         <div class="flex w-100 h-3/4">
             <div class="h-100 w-1/4 mb-1 ml-2 border-black">
-                <img src="{{ asset('storage/'. $etudiant->photo)}}" alt="profile_{{$etudiant->nom}}" class="lowercase object-contain " />
+                <img src="{{  secure_asset('storage/'. $etudiant->photo)}}" alt="profile_{{$etudiant->nom}}" class="lowercase object-contain " />
             </div>
             <div class="flex-auto pl-6 h-2/3">
                 <h1 class="relative text-2xl font-semibold">
@@ -47,7 +47,7 @@
         <input type="submit" value="Notifier Etudiant" class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-80" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
     </form>
 
-    <script src="{{ asset('js/index.js') }}" defer></script>
+    <script src="{{  secure_asset('js/index.js') }}" defer></script>
     <div  id="button-print"  class="bg-[#1C683F] hover:bg-[#1C683F] btn btn-primary mt-4 ml-6" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
         Imprimer la carte
     </div>

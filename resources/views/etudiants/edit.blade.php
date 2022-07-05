@@ -5,7 +5,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="{{ route('root') }}">
-                <img class="w-40 h-40" src="{{ asset('images/univbobo.png') }}" />
+                <img class="w-40 h-40" src="{{  secure_asset('images/univbobo.png') }}" />
             </a>
         </x-slot>
 
